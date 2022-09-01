@@ -26,9 +26,9 @@
             alert(this.sentence)
 
             axios 
-                .get('/api/word_game?sentence=${this.sentence}')
+                .get(`http://localhost:6007/api/word_game/?sentence=${this.sentence}`)
                 .then((result)=> {
-                   // console.log(result.data);
+                    console.log(result.data);
 
                      this.longestWord = result.data.longestWord;
                      this.shortestWord = result.data.shortestWord;
